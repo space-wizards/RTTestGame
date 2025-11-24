@@ -35,6 +35,8 @@ public sealed class EntryPoint : GameServer
     {
         base.PostInit();
         // DEVNOTE: Can also initialize IoC stuff more here.
+
+        Dependencies.Resolve<ConnectionManager>().Initialize();
     }
 
     public override void Update(ModUpdateLevel level, FrameEventArgs frameEventArgs)

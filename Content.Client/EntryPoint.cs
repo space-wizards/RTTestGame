@@ -30,7 +30,7 @@ public sealed class EntryPoint : GameClient
             prototypes.RegisterIgnore(ignoreName);
         }
 
-        ClientContentIoC.Register();
+        ClientContentIoC.Register(Dependencies);
 
         IoCManager.BuildGraph();
 

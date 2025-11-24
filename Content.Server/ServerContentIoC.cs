@@ -6,5 +6,6 @@ internal static class ServerContentIoC
     {
         // DEVNOTE: IoCManager registrations for the server go here and only here.
         dependencies.Register<LocalHostConGroup>();
+        dependencies.Register<ConnectionManager>();
     }
 }
