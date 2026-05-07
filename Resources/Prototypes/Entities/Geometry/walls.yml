@@ -1,0 +1,28 @@
+﻿- type: entity
+  id: BaseWall
+  name: Wall
+  abstract: true
+  components:
+    - type: Sprite
+      texture: /Textures/Entities/Geometry/wall.png
+    - type: Occluder
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          density: 1000
+
+- type: entity
+  parent: BaseWall
+  id: Wall
+  suffix: Normal
+
+- type: entity
+  parent: BaseWall
+  id: WallBrown
+  suffix: Brown
+  components:
+    - type: Sprite
+      color: "#5E441F"
